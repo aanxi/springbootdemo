@@ -1,0 +1,31 @@
+#默认配置
+server:
+  port: 8080
+#切换配置
+spring:
+  profiles:
+    active: test
+---
+#开发环境
+server:
+  port: 8081
+spring:
+  config:
+    activate:
+      on-profile: dev
+---
+#测试环境
+server:
+  port: 8082
+spring:
+  config:
+    activate:
+      on-profile: test
+---
+#生产环境
+server:
+  port: 8083
+spring:
+  config:
+    activate:
+      on-profile: prod
